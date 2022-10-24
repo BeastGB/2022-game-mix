@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ForestMap.unity
+    guid: 1864df68beb8a6e4f84a8f0699cbc3f8
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 229f191617b6ec6e7b607e7bee94ccb9, type: 2}
