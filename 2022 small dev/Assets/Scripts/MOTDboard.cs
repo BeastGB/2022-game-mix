@@ -4,7 +4,7 @@ using TMPro;
 using System.Collections;
 public class MOTDboard : MonoBehaviour
 {
-    string textURL = "https://raw.githubusercontent.com/BeastGB/2022-game-mix/main/MOTD.txt";
+    string textURL = "https://raw.githubusercontent.com/BeastGB/MOTD/main/MOTDBALLS.txt";
     public TMP_Text MOTD;
     // Start is called before the first frame update
     void Start()
