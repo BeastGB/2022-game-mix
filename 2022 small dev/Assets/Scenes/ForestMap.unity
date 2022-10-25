@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43977338, g: 0.48810285, b: 0.5686457, a: 1}
+  m_IndirectSpecularColor: {r: 0.4397733, g: 0.4881026, b: 0.5686453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4801,7 +4801,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad808592d4bd56e40bd7775b4c17d745, type: 2}
+  - {fileID: 2100000, guid: 98ea65378023f1b33b7262af2e5a1f43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4994,8 +4994,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 56
+  m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5030,15 +5030,15 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 7.5453606, y: -6.3713017, z: -52.74135, w: -8.8543825}
+  m_margin: {x: 7.5453606, y: -6.3713017, z: -115.18216, w: -25.923105}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1217747929}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1217747929
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,7 @@ RectTransform:
   m_GameObject: {fileID: 1217747927}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -16.508}
-  m_LocalScale: {x: 0.074637085, y: 0.074637085, z: 0.074637085}
+  m_LocalScale: {x: 0.03697937, y: 0.03697937, z: 0.03697937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1644935791}
@@ -5098,7 +5098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.05, y: -4.42}
+  m_AnchoredPosition: {x: -3.07, y: -4.33}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1234392553
@@ -6953,12 +6953,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -14.114217, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1785054333}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1785054333
 MeshRenderer:
   m_ObjectHideFlags: 0
