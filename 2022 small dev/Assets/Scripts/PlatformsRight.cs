@@ -11,8 +11,8 @@ public class PlatformsRight : MonoBehaviour
     public InputDeviceCharacteristics Controller;
     [Header("This is our reference to the rigidbody")]
     public Rigidbody rb;
-    public GameObject rPlatform;
     public GameObject rHand;
+    public GameObject rPlatform;
     public Vector3 Offset;
 
     void Start()
@@ -28,12 +28,10 @@ public class PlatformsRight : MonoBehaviour
 
     void Update()
     {
-        targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
-        if (triggerValue > 0.1f)
+        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool primaryButtonValue) && primaryButtonValue)
         {
             rPlatform.SetActive(true);
             rPlatform.transform.position = rHand.transform.position - Offset;
         }
-        rPlatform.SetActive(false);
-    }   
+    }
 }

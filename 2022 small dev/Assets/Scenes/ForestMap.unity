@@ -1544,7 +1544,7 @@ MonoBehaviour:
   enable: {fileID: 232823625}
   disable: {fileID: 1561653369}
   CosmeticName: TopHat
-  price: 2147483647
+  price: 500
 --- !u!65 &175853737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11835,7 +11835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1133981425
 Transform:
   m_ObjectHideFlags: 0
@@ -16830,8 +16830,8 @@ MonoBehaviour:
   hand: {fileID: 430285556569153872}
   Controller: 320
   rb: {fileID: 430285556198219597}
-  lPlatform: {fileID: 1133981424}
   lHand: {fileID: 430285556569153873}
+  lPlatform: {fileID: 1133981424}
   Offset: {x: 0, y: 0.15, z: 0}
 --- !u!114 &1657852931
 MonoBehaviour:
@@ -16848,8 +16848,8 @@ MonoBehaviour:
   hand: {fileID: 430285558228640418}
   Controller: 576
   rb: {fileID: 430285556198219597}
-  rPlatform: {fileID: 2079518892}
   rHand: {fileID: 430285558228640419}
+  rPlatform: {fileID: 2079518892}
   Offset: {x: 0, y: 0.15, z: 0}
 --- !u!1 &1660933812
 GameObject:
@@ -22001,7 +22001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2079518893
 Transform:
   m_ObjectHideFlags: 0
