@@ -5,17 +5,20 @@ using UnityEngine;
 public class PlatformDisable : MonoBehaviour
 {
     
-    public Platform platformScript;
+    public PlatformsRight platformScriptRight;
+    public PlatformsLeft platformScriptLeft;
     
     // Start is called before the first frame update
     private void OnTriggerEnter (Collider Other)
     {
-        platformScript.enabled = false;   
+        platformScriptRight.enabled = false;  
+        platformScriptLeft.enabled = false;
     }
 
     // Update is called once per frame
     private void OnTriggerExit (Collider Other)
     {
-        platformScript.enabled = false; 
+        platformScriptRight.enabled = false;
+        platformScriptLeft.enabled = false;
     }
 }
