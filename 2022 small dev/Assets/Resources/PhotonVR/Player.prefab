@@ -558,7 +558,9 @@ GameObject:
   - component: {fileID: 1181235280444687748}
   - component: {fileID: 1181235280444687689}
   - component: {fileID: 1181235280444687621}
-  m_Layer: 0
+  - component: {fileID: 6992309451467825319}
+  - component: {fileID: 810280104323942982}
+  m_Layer: 4
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,6 +632,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6992309451467825319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181235280444687540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e1292a13d939c9886f261627974098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &810280104323942982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181235280444687540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.019999998}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
 --- !u!1 &1181235280444687550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1465,8 @@ GameObject:
   - component: {fileID: 9026401475300254882}
   - component: {fileID: 9026401475300254516}
   - component: {fileID: 3522160853068468570}
-  m_Layer: 0
+  - component: {fileID: 284042505475963723}
+  m_Layer: 4
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,6 +1552,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AmountToGive: 100
   TAG: Body
+--- !u!65 &284042505475963723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026401475300254340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.019999998}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
 --- !u!1 &9026401475300254344
 GameObject:
   m_ObjectHideFlags: 0
