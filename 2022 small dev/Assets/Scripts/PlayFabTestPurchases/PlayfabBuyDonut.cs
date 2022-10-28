@@ -6,7 +6,7 @@ using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 using System;
 
-public class PlayfabBuyTopHatTest : MonoBehaviour
+public class PlayfabBuyDonut : MonoBehaviour
 {
     public GameObject EnableButton;
     public GameObject DisableButton;
@@ -24,9 +24,9 @@ public class PlayfabBuyTopHatTest : MonoBehaviour
     {
       PurchaseItemRequest request = new PurchaseItemRequest();
       request.CatalogVersion = "rare";
-      request.ItemId = "TopHat";
+      request.ItemId = "Donut";
       request.VirtualCurrency = "MX";
-      request.Price = 500;
+      request.Price = 250;
         
         
        PlayFabClientAPI.PurchaseItem(request, result => {
@@ -44,7 +44,7 @@ public class PlayfabBuyTopHatTest : MonoBehaviour
         
         PurchaseItemRequest request2 = new PurchaseItemRequest();
       request2.CatalogVersion = "rare";
-      request2.ItemId = "TopHatPurchaseState";
+      request2.ItemId = "DonutPurchaseState";
       request2.VirtualCurrency = "MX";
       request2.Price = 0;
         
