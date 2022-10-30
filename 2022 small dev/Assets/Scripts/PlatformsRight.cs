@@ -28,7 +28,7 @@ public class PlatformsRight : MonoBehaviour
 
     void Update()
     {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool primaryButtonValue) && primaryButtonValue)
+        if (targetDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool primaryButtonValue) && primaryButtonValue)
         {
             rPlatform.SetActive(true);
             rPlatform.transform.position = rHand.transform.position - Offset;
