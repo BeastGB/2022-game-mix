@@ -13,6 +13,8 @@ public class PlayFabCosmetics : PlayFabManager
 {
 
     public List<GameObject> Cosmetics;
+    
+    public List<GameObject> CosmeticsPurchaseState;
 
 
 
@@ -28,7 +30,7 @@ public class PlayFabCosmetics : PlayFabManager
 
             {
 
-                Debug.Log(item.CatalogVersion);
+                Debug.Log("Catalog is " + item.CatalogVersion);
 
                 if (item.CatalogVersion == "rare")
 
@@ -44,6 +46,24 @@ public class PlayFabCosmetics : PlayFabManager
 
                             Cosmetics[i].SetActive(true);
                             Debug.Log("Yessir");
+
+                        }
+
+                    }
+
+                }
+                {
+
+                    for (int i = 0; i < CosmeticsPurchaseState.Count; i++)
+
+                    {
+
+                        if (CosmeticsPurchaseState[i].name == item.ItemId)
+
+                        {
+
+                            CosmeticsPurchaseState[i].SetActive(false);
+                            Debug.Log("Shit disabled");
 
                         }
 
