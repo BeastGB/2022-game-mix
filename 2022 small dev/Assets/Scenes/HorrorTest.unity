@@ -214,7 +214,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354305826}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 1973872821}
   - component: {fileID: 1973872820}
   - component: {fileID: 1973872819}
+  - component: {fileID: 1973872823}
   m_Layer: 0
   m_Name: Green weirdo
   m_TagString: Untagged
@@ -612,6 +613,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973872823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973872818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697e9a779c34f17789850e46d07d03d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AHHHH: {fileID: 1973872818}
 --- !u!1 &2029539364
 GameObject:
   m_ObjectHideFlags: 0
