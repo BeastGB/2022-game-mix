@@ -5,11 +5,17 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
 using System;
+using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
-
-    //private string LocalPlayFabID;
+    public static PlayFabManager instance;
+        public List<GameObject> Cosmetics;
+    
+    public List<GameObject> CosmeticsPurchaseState;
+    
+        public TMP_Text coinsValueText;
+//private string LocalPlayFabID;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +32,45 @@ public class PlayFabManager : MonoBehaviour
         };
         PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnError);
     }
+    
 
-    void OnSuccess(LoginResult result)
+    public void getVirtualCurrencies()
+        {
+            PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), OnGetUserInventorySuccess, jOnError);
+        }
+    
+    void OnGetUserInventorySuccess(GetUserInventoryResult result) 
+    {
+        
+        int coins = result.VirtualCurrency["MX"];
+        coinsValueText.text = coins.ToString();
+    }
+    
+    void jOnError(PlayFabError jerror)
+        {
+        Debug.Log("Error: " + jerror.ErrorMessage);
+        
+    }
+    
+    public void OnSuccess(LoginResult result)
     {
         Debug.Log("Successful login/account create!");
 
         PlayFabPlayerLoggedIn();
 
         string pUsername = PlayerPrefs.GetString("username");
+        
+        
+        PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), OnGetUserInventorySuccess, jOnError);
+        
+        
+        
+        void OnGetUserInventorySuccess(GetUserInventoryResult result) 
+    {
+        
+        int coins = result.VirtualCurrency["MX"];
+        coinsValueText.text = coins.ToString();
+    }
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest
         {
@@ -48,6 +85,71 @@ public class PlayFabManager : MonoBehaviour
         });
 
         //LocalPlayFabID = result.PlayFabId;
+        
+        PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), delegate (GetUserInventoryResult result)
+
+        {
+
+            foreach (ItemInstance item in result.Inventory)
+
+            {
+
+                Debug.Log("Catalog is " + item.CatalogVersion);
+
+                if (item.CatalogVersion == "rare")
+
+                {
+
+                    for (int i = 0; i < Cosmetics.Count; i++)
+
+                    {
+
+                        if (Cosmetics[i].name == item.ItemId)
+
+                        {
+
+                            Cosmetics[i].SetActive(true);
+                            Debug.Log("Yessir");
+
+                        }
+
+                    }
+
+                }
+                {
+
+                    for (int i = 0; i < CosmeticsPurchaseState.Count; i++)
+
+                    {
+
+                        if (CosmeticsPurchaseState[i].name == item.ItemId)
+
+                        {
+
+                            CosmeticsPurchaseState[i].SetActive(false);
+                            Debug.Log("Shit disabled");
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }, delegate (PlayFabError error)
+
+        {
+
+            if (error.Error == PlayFabErrorCode.AccountBanned)
+
+            {
+
+                Application.Quit();
+
+            }
+
+        });
 
     }
 

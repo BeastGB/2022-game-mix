@@ -26,8 +26,7 @@ public class PlayfabBuyDonut : MonoBehaviour
       request.CatalogVersion = "rare";
       request.ItemId = "Donut";
       request.VirtualCurrency = "MX";
-      request.Price = 250;
-        
+      request.Price = 250;        
         
        PlayFabClientAPI.PurchaseItem(request, result => {
            
