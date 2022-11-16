@@ -1,4 +1,4 @@
-﻿namespace GorillaLocomotion
+namespace GorillaLocomotion
 {
     using UnityEngine;
 
@@ -10,6 +10,10 @@
 
         public SphereCollider headCollider;
         public CapsuleCollider bodyCollider;
+        
+        public GameObject CapsuleShitLikeThat;
+            
+        public GameObject BreakTheFourthWall;
 
         public Transform leftHandFollower;
         public Transform rightHandFollower;
@@ -351,6 +355,11 @@
             {
                 return wasRightHandTouching;
             }
+        }
+        
+        void update()
+        {
+            CapsuleShitLikeThat.transform.position = BreakTheFourthWall.transform.position;
         }
 
         public void Turn(float degrees)
