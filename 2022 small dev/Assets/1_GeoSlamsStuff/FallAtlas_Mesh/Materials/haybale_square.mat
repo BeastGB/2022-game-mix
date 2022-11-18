@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LavaTestJumpscare
+  m_Name: haybale_square
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c41b5a6e02ac6d1619d808e2aaa1b78e, type: 3}
+        m_Texture: {fileID: 2800000, guid: dd207cfe9c2c315479ec5376b8dbfcf0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
